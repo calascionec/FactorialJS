@@ -25,8 +25,10 @@ $(document).ready(function() {
     $('.answer').empty();
     $('.number').text(number);
 
-    if (result !== -1) {
+    if (result !== -1 && result !== Infinity) {
       $('.answer').text(result);
+    }  else if (result === Infinity) {
+      $('.answer').text("really really big! Try a smaller number");
     } else {
       $('.not').text("No factorial");
     }
